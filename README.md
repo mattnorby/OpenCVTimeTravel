@@ -12,10 +12,11 @@ The high-level flow of the program is as follows:
 1. Load the kayak image.
 2. Resize the kayak to a plausible size.
 3. Blur the kayak image, since it is in better focus than the 1997 image.
-4. Allow the user to click points on the screen, which will be used as polygon vertices.
-5. Create a mask from the polygon selected by the user.
-6. Create a mask for the tourist in the foreground.
-7. Seamlessly clone the kayak into the 1997 image.
-8. Copy the foreground pixels (the tourist) back into the cloned image, to remove artifacts close to the cloned region.
-9. Save the image to disk as clone.jpg.
-10. Resize the image to fit on screen, and display it.
+4. Use a color lookup table to darken the water in the kayak image, so it better matches the 1997 image.
+5. Allow the user to click points on the screen (or provide hardcoded points), which will be used as polygon vertices.
+6. Create a mask from the polygon formed by the points.
+7. Create a mask for the tourist in the foreground of the 1997 image.
+8. Seamlessly clone the kayak into the 1997 image.
+9. Copy the foreground pixels (the tourist) back into the cloned image, to remove artifacts close to the cloned region.
+10. Save the image to disk as clone.jpg.
+11. Resize the image to fit on screen, and display it.
